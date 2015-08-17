@@ -22,6 +22,9 @@ $(OUT).elf: $(OUT).o
 flash: $(OUT).hex
 	$(AVRDUDE) -U flash:w:$(OUT).hex
 
+avrstatus:
+	$(AVRDUDE) -v
+
 clean:
 	rm $(OBJS)
 	rm $(OUT).elf
